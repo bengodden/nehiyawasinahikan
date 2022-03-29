@@ -5,19 +5,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import Editor from "@/components/Editor.vue";
-// import { quillEditor } from "vue-quill-editor";
 import { VueEditor } from "vue2-editor";
 
 export default {
-  name: "Home",
   components: {
     VueEditor,
   },
+
   data() {
     return {
-      content: "<h1>masinahikē ōta</h1>",
+      content: "<h1>Some initial content</h1>",
     };
   },
 };

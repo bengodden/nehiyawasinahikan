@@ -1,21 +1,42 @@
 <template>
-  <div id="app">
-    <vue-editor v-model="content"></vue-editor>
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center"></div>
+
+      <v-spacer></v-spacer>
+      <router-link to="/">
+        <v-btn href="" target="_blank" text>
+          <span class="mr-2">Home</span>
+        </v-btn>
+      </router-link>
+
+      <router-link to="/about">
+        <v-btn href="" target="_blank" text>
+          <span class="mr-2">About</span>
+          <v-icon>mdi-open-in-new</v-icon>
+        </v-btn>
+      </router-link>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import { VueEditor } from "vue2-editor";
+// import { quillEditor } from "vue-quill-editor";
 
 export default {
-  components: {
-    VueEditor,
-  },
-
   data() {
     return {
-      content: "<h1>Some initial content</h1>",
+      name: "app",
+      content: "<h2>Example</h2>",
+      editorOption: {},
     };
+  },
+  components: {
+    // quillEditor,
   },
 };
 </script>
